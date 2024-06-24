@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Review</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+        <div class="oneone">
+            
+            <img src="logo.png"  width=180px  height=60px  >
+            <ul class="sidebar">
+                <li onclick=hidesidebar()><a href="#"><i class='bx bx-x'></i></a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="#home">Home</a></li>
+                <li class="hideOnMobile"><a href="#review">Reviews</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+                <li class="menu" onclick=showsidebar()><a href="#"><i class='bx bx-menu' style="font-size: 28px;"></i></a></li>
+            </ul>
+            <script>
+                function showsidebar(){
+                    const sidebar =document.querySelector('.sidebar')
+                    sidebar.style.display ='flex'
+                }
+                function hidesidebar(){
+                    const sidebar =document.querySelector('.sidebar')
+                    sidebar.style.display ='none'
+                }
+            </script>
+        </div>
+        <div class="con">
+        <section class="home" id="home">
+            <div class="text">  
+                <h1>Lights. Camera. Review!</h1>
+            
+                <span>Cinema is a mirror reflecting our collective dreams and </span>
+                <span>nightmares. Every film has a story, and every story </span>
+                <span>deserves a review. The magic of movies lies in the stories   </span>                
+                <span>they tell and the emotions they evoke. A great movie stays 
+                <span>with you long after the credits roll. In every review, we </span>
+                <span>seek to uncover the heart of the film.</span>
+
+                <br>
+                <br>
+                
+
+                <span class="sign"> Sign In</span>
+            </div>
+        </section>
+      
+        
+        <section class="review" id="review">
+              <section class="con1">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img src="zodiac.webp" id="sli1">
+                        <img src="predestination-british-movie-poster.jpg" id="sli2">
+                        <img src="shutter-island.jpg" id="sli3">
+                        <img src="5625919.jpg" id="sli4">
+                        <img src="5625927.jpg" id="sli5">
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#sli1"></a>
+                        <a href="#sli2"></a>
+                        <a href="#sli3"></a>
+                        <a href="#sli4"></a>
+                        <a href="#sli5"></a>
+                    </div>
+                </div> 
+              </section>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="gallery-wrap">
+                <i class='bx bx-chevron-left'style='font-size: 45px;' id="bef"></i>
+                <div class="gallery">
+                    <div>
+                        <img src="r1n.jpg" id="">
+                        <span>baradwaj rangan</span>
+                    </div>
+                    <div>
+                        <img src="r2.jpeg" id="">
+                        <span>abisheik raja</span>
+                    </div>
+                    <div>
+                        <img src="r3.jpg" id="">
+                        <span>maaran</span>
+                    </div>
+                    <div>
+                        <img src="r4.jpg" >
+                        <span>prasannth</span>
+                    </div>
+                    
+                </div>
+                <i class='bx bx-chevron-right' style='font-size: 45px;' id="next" ></i>
+            </div>
+
+            <script>
+                let scrollContiner = document.querySelector(".gallery");
+                let bef=document.getElementById("bef");
+                let next=document.getElementById("next");
+
+                scrollContiner.addEventListener("wheel",(evt) =>{
+                    evt.preventDefault();
+                    scrollContiner.scrollLeft += evt.deltay;
+                });
+
+                bef.addEventListener("click",() =>{
+                    scrollContiner.scrollLeft -= 400;
+                });
+                next.addEventListener("click",() =>{
+                    scrollContiner.scrollLeft += 400;
+                });
+            </script>
+
+            <div class="abttxt">
+                     <h1>ABOUT</h1>
+                     <h2>                              </h2>
+                     <p>CRITIQUE is a dedicated platform for movie enthusiasts, offering insightful and comprehensive reviews of the 
+                        latest films from around the globe. Our expert team of critics provides in-depth analysis, ratings, and recommendations, 
+                        helping audiences make informed decisions about what to watch next. We cover a wide range of genres and cater to diverse tastes, 
+                        ensuring there's something for everyone. Whether you're a casual viewer or a hardcore cinephile,
+                        our reviews aim to enhance your movie-watching experience with thoughtful critiques and engaging content.
+                        <br><br>Our reviewers are not just movie lovers; they are trained critics who bring a sharp,
+                             analytical eye to every review. They delve into various elements of filmmaking, such as direction, screenplay, acting, cinematography, 
+                            and sound design, providing a holistic view of each film's strengths and weaknesses.</p>
+
+            </div>
+        </section>
+
+
+        <section class="contact" id="contact">
+            <div class="contact1">
+                
+                <span>How can we help you?</span>
+                <h1>Contact us</h1>
+                <p>
+                    We're here to help and answer any question you might have. We look forward to hearing from you.  
+                </p>
+                <nav class="loc">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAw5JREFUSEvFlknITmEUx39/ZCpzhGQqQ4aIEgtCQokMWYhCFLGRKUpKMpRpRSGSrGyUIqSMZWPOVEqmLJDYyBDHPV/n6vW69733/TbfU3dxn+c853/Oef5nEE201ES41A1sZn2AUUBfwICXwF1Jr+txohSwmbncCmAtMCAH4BmwFzguyQ2quQqBzawncAYYU6Qszm8AcyV9rCVfE9jMBgJXgR6h5AlwBLgPPI69YcBIYCUwKPY8/BMkvckDzwU2s/bA7YrQbgV2SPqdpczMWgA7gQ1xfg8YJ+l7lnwt4FPAwri0WtKhVIGZObGWxP8JSe5hwzIzN3Bb/O6TtL40sJmNBW7FhSOSnFh/l5lNBK7ExiRJ/hyV586J2YBHZ7Ck59XgmR6b2QFgTVzsLulDncCDgadxZ6OkPWWBHwFDgUuSplVfKvI4Qu7kG5KnI8/jT0AnYL+kdaGoMpwdkxQbEQY9SKLzOTUuCbs/g7/1CWCxFxhJ/cp67ExsGSzeEooKi4LLSWpwxsx2AZuS75ukNmWBXyUVqDdwTNLyRnp8HFiafK8keRb8s/JCfR0Y78yVNLmRb5zquJaGv1JPHvBRwD31dOgs6UudrO4CvAeaJVXvsCSvaqU8nppUnYshuUySh60yT4vyeBVwMC78l+cNXKi2JN6zOfAO6JZ4/hboL+lnKltQudpGq+waOnpldataJdPZvD3AMotAjtFerzfH2XpJ+7LkagG3Al4k3cjb4g/vPJU1OQfUc/tuvK3f9XL5N1KF5KoI6fyk+pyO/4fRbb7mgHrBuQOkxWKGpPNZsrlvXEUkJ4mTxdfZaPK/qmRaBxknxP7upB2m4c7ELjOBONEuAFNCg0dgQdqXzcxBzwFpvntnmlc0/hQCB8udqV4QRgd4Q6s0M89TB5oV+5cBD7FzouYqBRzgHWIM8jHH10mgHTAn/n3Wmi4pkwPVVpQGDvDOAT68StHNZHCYVha0FLmqLTUzb4le1dKp08M7U9K3ovBWntflcXoxBrtFUctP5Q2AtQxpFHA9nuXJNhnwHyqzMS75NVUnAAAAAElFTkSuQmCC"/>
+                </nav>
+                <nav class="loc1">
+                    <a href="https://www.google.com/maps/place/Anna+Nagar,+Chennai,+Tamil+Nadu/@13.0899413,80.1869869,14z/data=!3m1!4b1!4m6!3m5!1s0x3a5264078822719b:0xbda01077b89581e2!8m2!3d13.0849557!4d80.2101342!16zL20vMDcwOWx5?entry=ttu">Annanagar Chennai-600050 India</a> <br>
+                </nav>
+                <br>
+                <nav class="phone">
+                <i class='bx bx-phone'  style=' font-size:30px'  ></i>
+                </nav>
+                <span>+91 1234567890</span> <br>
+                <br>
+                <nav class="mail">
+                <i class='bx bxl-gmail' style="font-size: 30px;"></i>
+                </nav>
+                <span>qwerty@gmail.com</span> <br>
+            </div>
+
+            <nav class="soc">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAiZJREFUSEvtlkuoTlEUx3//GEi6XArlFSUpMcDkeuQRSRmIZKDclIFCijIQAwNKSYhMTbxlJJkoDCQmMmRCScpEyrv+ztK5t+9+vnPOPs7NN7m7dmdw1l6/9dprbdGlpS5xGQH/t8g3DrXt8cBFoA+YAXwDzgAnJX0JT2xPia+kDwOeDQHbHgtcAnZJ+lXlvu1pwGNgdgfZd8BVYAHQI2lZq0w7eEsmeAu4A2yrgtu+C2ysMPAVsCGiIelhkcf7gHP5z6fADkmvOym2vQR4VhUV4E0WxanAZkn3isArgUGrgO/AMeC8pK+tENv7gbMJ4I+5A/fLQj0G+AyMblMYRXIbuJJZ/kLSe9tHgeMJ4FOZ0Yfb5f6qatt78iot0/kJiD0zAXxE0olSsO1+YGFWXIuANQlKU0T6JV2uAq8HhuQiRXOFTJ+kJ1XgyG1U8axhAIaKSEevJKfkeEV+jycNA/y6pO2d9HRsmXlHOgjsBsY1MGBVa9MovE4DP2zvBbYCixuAn0taWmR0kcfzgZfAqAberpX0oBY4hG1vAq4BMTjqrtOSDpUdKh2LticDEfbVwPJE+iNgnaQfTcA9WQuNIjsQoy0BHBHaWQUNPYMe256Yd6wY5vPyHd2rNwEY9zVa44UE2T8i7fM4Kjn66txEBT+BGxGV1tdFytmiqg5PY8DHy2I6MAeYkOU7Rlzst3mTuSkpvK29Gr+5ahPzAyPgf41c7XNdC/Vv5teaHw9v2QMAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA2RJREFUSEvNlluoVlUUhb+hpWAJBYmX0iKsUNDj9UXxQvWWYUhQEF7h+OCbFxSkxAuhoFEvQQ/mMYPAByvMeikQ60DiNUQpRB+kjhIESVZvOVvjsH7ZZ5+9/31+X44Lfv6Htdccc4415lhTDNPSMOHyYANHxERgKjCygaH/gGuSbjUxWVtxREwA9gOvAI83BSrt/wl8DWytS6ISOCIMdjQBP5ID/gNcBFxRuzUKmAOMzh/9Dbwh6ZvyoUHAETEGuA644p70/xFwXlITaH/siHgIWATsyv83geck/VsErwL2gR2uWNKbHVJs4JUJVJKORMRJYKmTkLSzCfg34ElXLOn3ToAz6JF8Zm2+np+APklP1QJnQVmRv0iaVgUaEU5qObDAzAI/Al9YRBGxCvgkn1snqSci7gCPAuMk/dGKOYDqiLAwzgO9knxPA1ZErE9BDgBjS1t/ARslHYqINaYauCzpbGLBenkWmCHpch2wwb53K0haVgyeMt+cQQ3yAXABeBiYadBclcG9d29FxCWDmiFJZqd/lSt+Gfg2U7ei9VFEzE79fBYwVXMl9ZWCT8mJmIk5kq4UzvqOu6xwSb1NwMcSLa8XDu9OPfwOsEnS+zV3vw3YB7wt6d3CWTPjxBdL+qEO+CXgu4qKvwJM/TJJdqRBK1Fqho75V0ramrF2lko6VQfsnnPvnZD0aiHrL7OSl0s63iGwr2he0s6Lkhy78o5bwMcluWX6V0TYUGwsWyS9VwO8PYnNFG+XtLdw9px1kQpaIsnCbQtcrniyezuZvm1vVoW4ns5mYbt8ofgwRMSQxLXQPVzTThuSCXyYqrbxu2VciR8FK9btZI/vTg51sKR4K3x6ijk/tajPVFZs9VmFdQbSnczDVFcZiBX/cfkaCgbSJck9XQlsP/0VuCHpmZq7tGW+lvrd7PjFOp1M5POqdzciRuTr8TM5WZLfgUpgTxi3swtNGsokUZVcQVhWs1Xt63ms+LRWPYumax3wmaS32gVu2osIq9g23CPJMe+tKuAngKt53PHksAc4I+luE1BuvdYg4HO+Do9BzxdfJn9XN/qsBg4XgO539HGIVZI+LSfdbthbbG9Oz6QdzCLpZJmdE+6Aomm0pbqiHcanMahyKGiTyc9N08uDPdB3wvFQvx22iv8H0cNdLvG6xLkAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAARFJREFUSEvtljFKQ0EURc8l2FnahCxABBt3YMAN2KbRJrqI9O4gokFIOndgJ4lLsFDIBoLaBLSUcM23GgLh/wnJH4N/2ve4Z96dx2VEoqNEXLYTbLsGHAG7wBfwAbxJ+s5zcuWJbZ8CXaC+AHmRdLgRsO1zoL9EfDNg2zvABNgrG3wMDBegY+AB+MzeWdL12q22fQYMAuF3oCFplgcL69HLZftivlC3gciTpMyFqLMK+BK4CSgjSc0oKsQHiO3ywLZfgYOCU91LauX1FrI6Enw1T65OCnBb0l0K8Imkx7WAQxHbbaCXYqsrcGkBUlldWZ2XHb/1Qln9VwIk+1XuB5eZSnouNGbQFD1xLGBZ//8D/wAChn4fd1oRQAAAAABJRU5ErkJggg=="/>
+
+            </nav>
+
+            
+
+        </section>
+        </div>
+
+    </body>
+</html>
